@@ -21972,6 +21972,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
+    "@chakra-ui/icons": ^2.0.10
     "@redwoodjs/core": 3.0.1
   languageName: unknown
   linkType: soft
