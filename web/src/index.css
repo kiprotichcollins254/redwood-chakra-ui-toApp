@@ -1,0 +1,18 @@
+nav {
+  height: 80px;
+  padding: 2em 0em;
+}
+nav ul{
+  flex-direction: row;
+  display: flex;
+  list-style-type: none;
+  float: right;
+}
+li {
+  padding: 0 5em;
+  color: rgb(129, 7, 228);
+
+}
+li:hover{
+  color: crimson;
+}
