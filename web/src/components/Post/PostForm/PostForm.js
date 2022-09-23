@@ -1,3 +1,4 @@
+import { Input } from '@chakra-ui/react'
 import {
   Form,
   FormError,
@@ -6,6 +7,7 @@ import {
   TextField,
   Submit,
 } from '@redwoodjs/forms'
+
 
 const PostForm = (props) => {
   const onSubmit = (data) => {
@@ -37,6 +39,12 @@ const PostForm = (props) => {
           errorClassName="rw-input rw-input-error"
           validation={{ required: true }}
         />
+        {/* <Input
+         variant='flushed'
+         name="title"
+         defaultValue={props.post?.title}
+         validation={{ required: true }}
+         /> */}
 
         <FieldError name="title" className="rw-field-error" />
 
