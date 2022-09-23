@@ -17,11 +17,11 @@ const BlogLayout = ({ children }) => {
         </ul>
       </nav>
     </header>
-    <main>
+    <main >
 
-      <Container>
+      {/* <Container maxW='container.sm'> */}
        {children}
-      </Container>
+      {/* </Container> */}
     </main>
 </>
 )

@@ -9,10 +9,13 @@ nav ul{
   float: right;
 }
 li {
-  padding: 0 5em;
+  padding: 0 2em;
   color: rgb(129, 7, 228);
 
 }
 li:hover{
   color: crimson;
+}
+main{
+  padding: 20px;
 }

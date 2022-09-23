@@ -1,14 +1,15 @@
 
-import { Container } from '@chakra-ui/react'
+import { Center, Container ,Text} from '@chakra-ui/react'
 import { MetaTags } from '@redwoodjs/web'
+import ArticlesCell from 'src/components/ArticlesCell'
 
 const HomePage = () => {
   return (
     <>
       <MetaTags title="Home" description="Home page" />
 
-         <p>HomePage of the application with all the details</p>
-      
+         <Text textAlign="center" fontSize="2em" fontWeight="bold">Blogs and Articles</Text>
+         <ArticlesCell />
     </>
   )
 }

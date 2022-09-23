@@ -1,7 +1,12 @@
+import { Box, Center, SimpleGrid } from "@chakra-ui/react"
+
 export const QUERY = gql`
   query ArticlesQuery {
-    articles {
+     articles: posts {
       id
+      title
+      body
+      createdAt
     }
   }
 `
@@ -16,10 +21,23 @@ export const Failure = ({ error }) => (
 
 export const Success = ({ articles }) => {
   return (
-    <ul>
-      {articles.map((item) => {
-        return <li key={item.id}>{JSON.stringify(item)}</li>
-      })}
-    </ul>
+    <>
+    <SimpleGrid  minChildWidth='120px' spacingX='40px' spacingY='20px' mx="12">
+      {articles.map((article) => (
+
+          <Box key={article.id} bg='grey' p={2} boxShadow='sm' rounded='md'>
+            <Box >
+                <h3>{article.title}</h3>
+              </Box>
+              <Box>
+                <p>{article.body}</p>
+              </Box>
+              <Box >
+                <p>{article.createdAt}</p>
+              </Box>
+          </Box>
+      ))}
+    </SimpleGrid>
+    </>
   )
 }
