@@ -1,4 +1,6 @@
-import { Box, Center, SimpleGrid } from "@chakra-ui/react"
+import { Box, SimpleGrid } from "@chakra-ui/react"
+import {Link, routes } from '@redwoodjs/router'
+import Article from "src/components/Article"
 
 export const QUERY = gql`
   query ArticlesQuery {
@@ -25,17 +27,7 @@ export const Success = ({ articles }) => {
     <SimpleGrid  minChildWidth='120px' spacingX='40px' spacingY='20px' mx="12">
       {articles.map((article) => (
 
-          <Box key={article.id} bg='grey' p={2} boxShadow='sm' rounded='md'>
-            <Box >
-                <h3>{article.title}</h3>
-              </Box>
-              <Box>
-                <p>{article.body}</p>
-              </Box>
-              <Box >
-                <p>{article.createdAt}</p>
-              </Box>
-          </Box>
+         <Article article={article} />
       ))}
     </SimpleGrid>
     </>
