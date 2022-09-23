@@ -24,7 +24,7 @@ export const Failure = ({ error }) => (
 export const Success = ({ articles }) => {
   return (
     <>
-    <SimpleGrid  minChildWidth='120px' spacingX='40px' spacingY='20px' mx="12">
+    <SimpleGrid  minChildWidth='120px'  bg='gray.50' p="10" spacingX='40px' spacingY='20px' mx="12">
       {articles.map((article) => (
 
          <Article article={article} />
