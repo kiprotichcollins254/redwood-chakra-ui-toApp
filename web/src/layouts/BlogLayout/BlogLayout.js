@@ -6,7 +6,7 @@ import { Link, routes } from '@redwoodjs/router'
 const BlogLayout = ({ children }) => {
   const { isAuthenticated, currentUser, logOut } = useAuth()
   return (
-    <>
+    <div className="bg-blue-900 min-h-screen ">
       <header>
         <nav>
           <ul>
@@ -38,12 +38,12 @@ const BlogLayout = ({ children }) => {
           </ul>
         </nav>
       </header>
-      <main>
+      <main >
         {/* <Container maxW='container.sm'> */}
         {children}
         {/* </Container> */}
       </main>
-    </>
+    </div>
   )
 }
 
